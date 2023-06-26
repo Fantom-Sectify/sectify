@@ -29,7 +29,7 @@ const Signin = () => {
         <SigninParent>
             <SigninWrapper>
                 <div style={{
-                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw",
+                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
                     height: 800, width: 2000
                 }}>
 
