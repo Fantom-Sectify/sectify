@@ -30,7 +30,7 @@ const ConnectWallet = () => {
         <ConnectParent>
             <ConnectWrapper>
                 <div style={{
-                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw",
+                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
                     height: 800, width: 2000
                 }}>
 

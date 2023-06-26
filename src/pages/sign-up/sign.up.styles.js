@@ -63,7 +63,7 @@ export const FormHeader = styled.div`
 
 export const FormContainer = styled.div`
     width: 22%;
-    height: 85%;
+    height: 88%;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -72,7 +72,7 @@ export const FormContainer = styled.div`
     border-radius: 5px;
     margin-left: 30rem;
     justify-content: center;
-    margin-top:5rem;
+    margin-top:3rem;
 
     & form {
     width: 100%;
@@ -103,9 +103,7 @@ export const FormFooter = styled.div`
         font-weight:400;
         margin-left:3rem;
     }
-    & p {
-        
-    }
+    
      
    
     `;
