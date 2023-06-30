@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../../assets/logo.png";
+import axios from "axios";
 import {
     SigninParent,
     SigninWrapper,
@@ -23,7 +24,34 @@ import voting from "../../assets/voting.png";
 
 
 const Signin = () => {
+    const [formData, setFormData] = useState({
+        fullname: "",
+        phoneNumber: "",
+        password: ""
+    });
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8000/signin", formData);
+            // localStorage.setItem("token", response.data.token);
+            // localStorage.setItem("user", JSON.stringify(response.data.user));
+            if (response.status === 200) {
+                console.log('signin successful')
+                window.location.href = "/";
+                
+            } else {
+                console.error('Signin failed');
+            }
+            
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
     return (
         <SigninParent>
@@ -34,7 +62,7 @@ const Signin = () => {
                 }}>
 
                     <FormContainer>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <FormHeader>
 
                                 <LContainer>
@@ -57,15 +85,17 @@ const Signin = () => {
                                     Full name
                                 </FormLabel>
                                 <Input
-                                    type="name"
+                                    type="text"
                                     fontSize="10"
                                     fontWeight="300"
                                     fontFamily="inherit"
                                     height={"1.8rem"}
                                     placeholder="Enter full name"
-                                    name="First Name and Last Name"
+                                    name="fullname"
                                     borderRadius={"5px"}
                                     width={"18rem"}
+                                    value={formData.name}
+                                    onChange={handleChange}
                                 />
                             </FormControl>
 
@@ -76,15 +106,17 @@ const Signin = () => {
                                     Phone Number
                                 </FormLabel>
                                 <Input
-                                    type="phonenumber"
+                                    type="number"
                                     fontSize="10"
                                     fontWeight="300"
                                     fontFamily="inherit"
                                     height={"1.8rem"}
                                     placeholder="Enter Phone Number"
-                                    name="phonenumber"
+                                    name="phoneNumber"
                                     borderRadius={"5px"}
                                     width={"18rem"}
+                                    value={formData.phoneNumber}
+                                    onChange={handleChange}
                                 />
                             </FormControl>
 
@@ -101,6 +133,9 @@ const Signin = () => {
                                     placeholder="Password"
                                     borderRadius={"5px"}
                                     width={"18rem"}
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
 
                                 />
                             </FormControl>
