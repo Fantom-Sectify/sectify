@@ -84,6 +84,10 @@ export const FormContainer = styled.div`
     }
     & form-label.input.placeholder{
         margin-left:1rem;
+        
+    }
+    & img {
+        margin-right:1rem;
     }
     `;
 
