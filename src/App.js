@@ -6,7 +6,13 @@ import Home from "./pages/home/Home";
 import ResetPassword from "./pages/reset-password/ResetPassword";
 import VerifyPassword from "./pages/verify-password/VerifyPassword";
 import ConfirmPassword from "./pages/confirm-password/ConfirmPassword";
+import User from "./layouts/user-page/User";
 
+
+const path = {
+  index:"/",
+  user:"/user/*"
+}
 
 function App() {
   return (
@@ -19,6 +25,7 @@ function App() {
       <Route  path="/reset-password" element={<ResetPassword />} />
       <Route  path="/verify-password" element={<VerifyPassword />} />
       <Route  path="/confirm-password" element={<ConfirmPassword />} />
+      <Route path={path.user} element={<User />}/>
     </Routes>
     </BrowserRouter>
   );

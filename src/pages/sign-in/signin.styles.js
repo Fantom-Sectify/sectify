@@ -63,7 +63,7 @@ export const FormHeader = styled.div`
 
 export const FormContainer = styled.div`
     width: 22%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;

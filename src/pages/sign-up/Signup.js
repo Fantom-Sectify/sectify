@@ -59,7 +59,7 @@ const Signup = () => {
         <SignupParent>
             <SignupWrapper>
                 <div style={{
-                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat",backgroundSize:"100vw 100vh",
+                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat",backgroundSize:"100vw 120vh",
                     height: 800, width: 2000
                 }}>
 
