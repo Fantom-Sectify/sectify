@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Signup from "./pages/sign-up/Signup";
-import Signin from "./pages/sign-in/Signin";
+import Signup from "./pages/sign-up/Signup.jsx";
+import Signin from "./pages/sign-in/Signin.jsx";
 import ConnectWallet from "./pages/connect-wallet/ConnectWallet";
 import Home from "./pages/home/Home";
 import ResetPassword from "./pages/reset-password/ResetPassword";
