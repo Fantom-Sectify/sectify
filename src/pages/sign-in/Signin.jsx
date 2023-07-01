@@ -80,8 +80,8 @@ const Signin = () => {
             <form onSubmit={handleSubmit} className="space-y-2 mb-12 md:w-full">
                 <div className="space-y-2">
                     <div className=" space-y-1">
-                        <label htmlFor="number" className="block text-base text-black">VIN</label>
-                        <input type="number" name="VIN" id="vin" placeholder="Enter VIN" className="w-full p-2 rounded-md focus:outline-none pl-4 outline-gray-400 border-gray-400 border bg-white"
+                        <label htmlFor="text" className="block text-base text-black">VIN</label>
+                        <input type="text" name="VIN" id="vin" placeholder="Enter VIN" className="w-full p-2 rounded-md focus:outline-none pl-4 outline-gray-400 border-gray-400 border bg-white"
                         value={formData.VIN}
                         onChange={handleChange} 
                         required />

@@ -106,7 +106,7 @@ const Signup = () => {
         <div className="h-screen flex justify-center items-center" style={{
                     backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat",backgroundSize:"cover", backgroundPosition: "center",
                 }}>
-            <div className="bg-white w-[90%] md:w-[35%] mx-auto rounded-md md:p-8 p-4">
+            <div className="bg-white w-[90%] md:w-[35%] mx-auto rounded-md md:px-8 md:py-4 p-4">
             <div className="flex flex-col justify-center items-center">
                 <img src={logo} alt="logo" />
                 <h3 className="pt-3">Sign up to cast your vote for who you</h3>
