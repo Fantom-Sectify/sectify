@@ -25,7 +25,7 @@ const Signup = () => {
       if (isLoginSuccess) {
         const redirectTimer = setTimeout(() => {
           setIsRedirecting(true); // Start redirecting after 2.5 seconds
-        }, 2500);
+        }, 3000);
   
         return () => clearTimeout(redirectTimer);
       }
@@ -99,9 +99,9 @@ const Signup = () => {
     return (
         <>
         {isRedirecting ? ( // Conditional rendering for redirecting
-            <Navigate to="/user" /> // Replace with the actual home page route
+            <Navigate to="/sign-in" /> // Replace with the actual home page route
         ) : isLoginSuccess ? (
-            <SuccessPage text="Registration Successful, Kindly check your mail for VIN to signLoginin" /> // Replace with the actual successPage component
+            <SuccessPage text="Registration Successful" /> // Replace with the actual successPage component
         ) : (
         <div className="h-screen flex justify-center items-center" style={{
                     backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat",backgroundSize:"cover", backgroundPosition: "center",

@@ -23,7 +23,7 @@ const Signin = () => {
       if (isLoginSuccess) {
         const redirectTimer = setTimeout(() => {
           setIsRedirecting(true); // Start redirecting after 2.5 seconds
-        }, 2500);
+        }, 3000);
   
         return () => clearTimeout(redirectTimer);
       }
