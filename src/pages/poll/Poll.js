@@ -4,18 +4,16 @@ import {
   CenterWrapper,
   DataHeader,
   DataHeadersContainer,
-  DataRowsContainer,
-  CategoryContainer,
-  RegisteredContainer,
-  TotalContainer,
-  StartContainer,
-  EndContainer,
   Header,
   Rows,
-  StatusContainer,
   PollHeadersContainer,
-  Wrapper,
+  Wrapper, 
+  SearchBarContainer,
+  SearchBarForm,
+  Button,
+  SearchWrapper
 } from "./poll.styles";
+import searchIcon from "../../assets/search-icon.png";
 
 
 
@@ -23,53 +21,120 @@ import {
 
 
 const Poll = () => {
-  
+
 
   return (
     <PollParent>
       <CenterWrapper>
+        <h3>All poll</h3>
         <PollHeadersContainer>
-          
-           <Header>
-            </Header>
        
+          <Header>
+            <SearchWrapper>
+            <SearchBarContainer>
+            <SearchBarForm>
+              <button>
+                <img src={searchIcon} alt="search-icon" />
+              </button>
+              <input
+                type="text"
+                className="search-input"
+                placeholder="search poll category, Aspirant..."
+              />
+            </SearchBarForm>
+          </SearchBarContainer>
+          <Button>Filter</Button>
+          </SearchWrapper>
+          </Header>
+
         </PollHeadersContainer>
 
         <DataHeadersContainer>
-          
-              <DataHeader>Category</DataHeader>
-              <DataHeader>Registered voters</DataHeader>
-              <DataHeader>Total vote</DataHeader>
-              <DataHeader>Start Date</DataHeader>
-              <DataHeader>End Date</DataHeader>
-              <DataHeader>Status</DataHeader>
+
+          <DataHeader>Category</DataHeader>
+          <DataHeader>Registered voters</DataHeader>
+          <DataHeader>Total vote</DataHeader>
+          <DataHeader>Start Date</DataHeader>
+          <DataHeader>End Date</DataHeader>
+          <DataHeader>Status</DataHeader>
         </DataHeadersContainer>
 
-        <DataRowsContainer>
+        
           <Wrapper>
-           
-                  <Rows >
-                    <CategoryContainer>
-                     
-                     
-                    </CategoryContainer>
-                    <RegisteredContainer>
-                     
-                    </RegisteredContainer>
-                    <TotalContainer>
-                     
-                    </TotalContainer>
-                    <StartContainer>
-                   
-                    </StartContainer>
-                    <EndContainer>
 
-                    </EndContainer>
-                    <StatusContainer> </StatusContainer>
-                  </Rows>
-               
+            <Rows >
+              <table>
+                
+                <tr>
+                  <td>Presidential</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>In progress</td>
+                </tr>
+                <tr>
+                  <td>Gubernatorial</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>House of Rep</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>Senatorial</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>House of Assembly</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>Local Government</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>Local Government</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                <td>Local Government</td>
+                  <td>13,456,345</td>
+                  <td>12,1123,123</td>
+                  <td>11th of June</td>
+                  <td>13th of June</td>
+                  <td>Completed</td>
+                </tr>
+
+              </table>
+            </Rows>
+
           </Wrapper>
-        </DataRowsContainer>
+        
       </CenterWrapper>
     </PollParent>
   );
