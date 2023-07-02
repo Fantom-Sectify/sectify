@@ -29,6 +29,7 @@ const VoterHome = () => {
                 </PersonalInfoWrapper>
                 <Wrapper>
                     <PresidentialWrapper>
+                    <h3>Top 5 President candidate 2023 (by vote) </h3>
                         <Toppresident />
                     </PresidentialWrapper>
                     <PartyWrapper>

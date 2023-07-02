@@ -49,6 +49,7 @@ export const PresidentialWrapper = styled.div`
 width: 100%;
 height: 90%;
 display: flex;
+flex-direction:column;
 background:#fff;
 align-items: center;
 margin-top: 1rem; 

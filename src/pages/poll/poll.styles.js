@@ -26,11 +26,14 @@ export const PollHeadersContainer = styled.section`
   border-radius: 8px;
 `;
 
-export const NoDataFeedback = styled.p`
-  text-align: center;
-  padding: 1rem;
-  font-size: 1.4rem;
+export const SearchWrapper = styled.div`
+  display: flex;
+  width: 150%;
+ 
+  
 `;
+
+
 
 export const Header = styled.h1`
   font-weight: 500;
@@ -43,20 +46,90 @@ export const Header = styled.h1`
   }};
 `;
 
+
+export const SearchBarContainer = styled.div`
+  display: flex;
+  width:100%;
+  height: 50%;
+  margin-left: 1rem;
+  margin-bottom:3rem;
+  margin-top:3rem;
+  
+`;
+
+export const SearchBarForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  height: 500%;
+  padding-left: 1px;
+  padding-bottom: 5px;
+  background: #fff;
+
+  & .search-input {
+    border: 0;
+    outline: none;
+    background: #fff;
+    color: #00B4B6;
+    font-size: 1rem;
+    margin-left:2rem;
+    
+
+  }
+  & .search-input::placeholder {
+    color: #5d5e5f;
+    line-height: 25px;
+    font-size: 1rem;
+    margin-left: 3rem;
+  }
+  & button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 20px;
+    height: 10px;
+  }
+  & button img {
+    width: 13px;
+    height: 13px;
+    margin-top: 0.7rem;
+    margin-right: 2rem;
+  }
+`;
+
+export const Button = styled.button`
+display: flex;
+background:#fff;
+width:10rem;
+border: 1px solid #b3b3b3; 
+border-radius:5px;
+color:#000;
+height: 2.1rem;
+align-items: center;
+justify-content: center;
+margin-left:20rem;
+margin-right:4rem;
+margin-top:3rem;
+
+`;
+
 export const DataHeadersContainer = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background: #E6F5ED;
-  padding: 0px 30px;
+  padding: 0px 50px;
   height: 5.8rem;
   width: 100%;
-  gap: 5rem;
+  gap: 2rem;
+  
 
   & .spinner {
     margin: 0 auto !important;
     text-align: center;
-  }s
+  }
 `;
 
 export const DataHeader = styled.div`
@@ -64,24 +137,15 @@ export const DataHeader = styled.div`
   box-shadow: inset 0px -1px 0px #edf2f7;
   width: 15%;
   display: flex;
-  justify-content: center;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2.8rem;
 `;
 
-export const DataRowsContainer = styled.section`
-  background: #ffffff;
-  width: 100%;
-  height: auto;
-  border: 1px solid red;
-  border: 1px solid rgba(1, 22, 50, 0.1);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
-`;
+
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -94,71 +158,37 @@ export const Wrapper = styled.div`
 
 export const Rows = styled.section`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 9.3rem;
-  width: 100vw;
-  gap: 2rem;
-  box-shadow: inset 0px -1px 0px #edf2f7;
-`;
-
-export const CategoryContainer = styled.div`
-  display: flex;
-  gap: 2rem;
-  flex: 20%;
-  height: 100%;
-  align-items: center;
-  padding: 1rem;
-
- 
-`;
-
-export const RegisteredContainer = styled.div`
-  display: flex;
-  flex: 10%;
-  padding-left: 1rem;
-  height: 100%;
-  align-items: center;
-
+  flex-direction:column;
+  height: 100vh;
+  width: 90vw;
+  font-size:1rem;
+  font-weight:500;
+  background:#ffffff;
+  gap:3rem;
+  justify
   
-`;
-
-export const TotalContainer = styled.div`
-  display: flex;
-  flex: 13%;
-  height: 100%;
-  padding-left: 2rem;
-  align-items: center;
-`;
-
-
-
-
-export const StartContainer = styled.div`
-  display: flex;
-  flex: 10%;
-  height: 100%;
-  align-items: center;
-  padding-left: 4rem;
-
   
-`;
-export const EndContainer = styled.div`
-  display: flex;
-  flex: 10%;
-  height: 100%;
-  align-items: center;
-  padding-left: 4rem;
 
-  
-`;
-export const StatusContainer = styled.div`
-  display: flex;
-  flex: 10%;
-  height: 100%;
-  align-items: center;
-  padding-left: 4rem;
+  & table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 85vw;
+    height:100vh;
+    margin-top:10rem;
+    padding:2rem auto;
+    display:flex;
+   
+  }
 
-  
+  & td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 4px;
+  }
+
+  & tr:nth-child(even) {
+    background-color: #dddddd;
+  } 
 `;
+
 
