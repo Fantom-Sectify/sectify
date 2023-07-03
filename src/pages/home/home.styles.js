@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
+
 export const HomeParent = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color:#009947;
+    
+   
+
+    
+    
      `;
 
 export const HomeWrapper = styled.div`
@@ -15,24 +20,13 @@ export const HomeWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position:relative;
     background-color:#009947;
+    color: #009947;
 
-
-    
+   
     `;
 
-    export const Overlay = styled.div`
-        position: absolute;
-        display: block;
-        transform: translateX(-50%);
-        left: 50%;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 99, 0, 0.4);
-        content: '';
-      }
-          
-      `;
 
 export const LContainer = styled.div`
     width: 20%;
@@ -67,6 +61,12 @@ export const LContainer = styled.div`
     
     `;
 
+ export const Container = styled(Link)`
+    display: flex;
+    
+    `;
+    
+    
 
     export const BigLinkContainer = styled(Link)`
     display: flex;
@@ -117,7 +117,7 @@ margin-top:0.5rem;
 export const TextContainer= styled.div`
 width: 100vw;
 position: absolute;
-top: 50%;
+top: 45%;
 left: 60%;
 margin-left:10rem;
 transform: translate(-50%, -50%);
@@ -129,19 +129,27 @@ justify-content: center;
 font-weight:700;
 line-height:4rem;
 font-size:2.5rem;
+font-family: Sans-Serif;
+color:  #009947;
 
 }
 
 & h4 {
     font-weight:600;
     margin-left:3rem;
-    font-size:1rem;
+    font-size:1.2rem;
+    line-height:2rem;
+    font-family: Sans-Serif;
+    color:#009947;
+    margin-top:3rem;
 }
 
 & p {
     font-weight:600;
     margin-left:22rem;
-    line-height:0.1rem;
+    line-height:1rem;
+    font-size:1.2rem;
+    color:  #009947;
 }
 
 `;
@@ -156,7 +164,7 @@ border-radius:5px;
 color:#ffffff;
 height: 2.1rem;
 align-items: center;
-margin-top:0.4rem;
+margin-top:2rem;
 justify-content: center;
 margin-left:20rem;
 

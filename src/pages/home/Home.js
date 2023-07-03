@@ -10,25 +10,31 @@ import {
     SButton,
     Button,
     TextContainer,
-    Overlay
-
-} from "./home.styles.js";
+    Container
+   } from "./home.styles.js";
 import landingimage from "../../assets/landingimage.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Home = () => {
+    const navigate = useNavigate();
 
+    const handleGetStarted = () => {
+      navigate("/sign-in");
+    };
+
+   
 
     return (
         <HomeParent>
             <HomeWrapper>
-                <Overlay></Overlay>
+              
                 <div style={{
-                    backgroundImage: `url(${landingimage})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
-                    height: 800, width: 1800, backgroundColor: '#009947',
+                    backgroundImage:  `url(${landingimage})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
+                    height: 800, width: 1800, 
                 }}>
 
 
@@ -36,20 +42,23 @@ const Home = () => {
                         <LContainer>
                             <img src={logo} alt="logo" />
                         </LContainer>
+                        <Container>
                         <BigLinkContainer>
                         <LinkContainer><Link>About</Link></LinkContainer>
                        <LinkContainer><Link marginRight={20}>Process</Link></LinkContainer> 
                        <LinkContainer> <Link marginRight={10}>Blog</Link></LinkContainer>
                         <LinkContainer><Link to="/sign-in" marginRight={20}>Sign in</Link></LinkContainer>
-                        <SButton>Sign up</SButton>
+                        
                         </BigLinkContainer>
+                        <SButton><Link to="/sign-up">Sign up</Link></SButton>
+                        </Container>
                     </NavContainer>
                   <TextContainer><h3>Unlock the power of your vote with SECTIFY</h3>
                    <h4>Welcome to our innovative voting platform, where your voice becomes the catalyst for 
                     <br></br>change. Join us on a transformative journey, empowering you to shape the future you
                    </h4>
                    <p> desire</p>
-                    <Button>Get Started</Button>
+                    <Button onClick={handleGetStarted}>Get Started</Button>
                     </TextContainer>
                 </div>
             </HomeWrapper>
