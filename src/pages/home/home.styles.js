@@ -7,7 +7,7 @@ export const HomeParent = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    
+    z-index:3;
    
 
     
@@ -23,9 +23,28 @@ export const HomeWrapper = styled.div`
     position:relative;
     background-color:#009947;
     color: #009947;
+    z-index:auto;
 
    
     `;
+
+    export const Overlay = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index:auto;
+    justify-content: center;
+    position: absolute;
+    background: rgba(0, 99, 0, 0.5);
+    content: '';
+   
+
+   
+    `;
+
+    
+
 
 
 export const LContainer = styled.div`
@@ -36,11 +55,12 @@ export const LContainer = styled.div`
     margin-left:3rem;
     margin-top:0.5rem;
     
+    
 
     & img{
      height:3rem;
      width:8rem;
-     
+  
      
     }
     `;
@@ -56,7 +76,7 @@ export const LContainer = styled.div`
     border: 1px solid #D9D9D9; 
     margin-top: 3rem;
     margin-left: 5rem; 
-
+    
 
     
     `;
@@ -71,6 +91,7 @@ export const LContainer = styled.div`
     export const BigLinkContainer = styled(Link)`
     display: flex;
     margin-left: 35rem;
+    z-index:3;
    
     
      
@@ -109,6 +130,7 @@ height: 2.1rem;
 align-items: center;
 justify-content: center;
 margin-top:0.5rem;
+z-index:3;
 
 
 
@@ -130,7 +152,7 @@ font-weight:700;
 line-height:4rem;
 font-size:2.5rem;
 font-family: Sans-Serif;
-color:  #009947;
+color:  #fff;
 
 }
 
@@ -140,7 +162,7 @@ color:  #009947;
     font-size:1.2rem;
     line-height:2rem;
     font-family: Sans-Serif;
-    color:#009947;
+    color:#fff;
     margin-top:3rem;
 }
 
@@ -149,7 +171,7 @@ color:  #009947;
     margin-left:22rem;
     line-height:1rem;
     font-size:1.2rem;
-    color:  #009947;
+    color:  #fff;
 }
 
 `;

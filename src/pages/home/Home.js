@@ -10,7 +10,8 @@ import {
     SButton,
     Button,
     TextContainer,
-    Container
+    Container,
+    Overlay
    } from "./home.styles.js";
 import landingimage from "../../assets/landingimage.png";
 import { Link } from "react-router-dom";
@@ -31,7 +32,7 @@ const Home = () => {
     return (
         <HomeParent>
             <HomeWrapper>
-              
+              <Overlay></Overlay>
                 <div style={{
                     backgroundImage:  `url(${landingimage})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
                     height: 800, width: 1800, 
