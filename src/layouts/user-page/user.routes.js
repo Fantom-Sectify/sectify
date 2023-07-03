@@ -17,6 +17,12 @@ export const sideBarLinks = [
     alt: "poll",
   },
   {
+    path: "/user/presidential-poll",
+    icon:<img src={poll} alt="poll" />,
+    text: "Presidential Poll",
+    alt: "poll",
+  },
+  {
     path: "/user/aspirant",
     icon: <img src={aspirant} alt="aspirant" />,
     text: "Aspirant",

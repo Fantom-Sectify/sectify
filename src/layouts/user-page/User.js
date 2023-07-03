@@ -9,6 +9,7 @@ import Sidebar from "../../components/sidebar/Sidebar.js";
 import { sideBarLinks } from "./user.routes.js";
 import VoterHome from "../../pages/voter-home/Voterhome.js";
 import Poll from "../../pages/poll/Poll";
+import PresidentialPoll from "../../pages/presidential-poll/PresidentialPoll.js";
 
 
 
@@ -35,6 +36,7 @@ return (
          <Route index element={<VoterHome />} />
          <Route path="/" element={<VoterHome />} />
          <Route path="/poll" element={<Poll />} />
+         <Route path="/presidential-poll" element={<PresidentialPoll/>}/>
 
 
           </Routes>

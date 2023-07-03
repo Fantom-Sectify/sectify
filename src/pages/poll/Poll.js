@@ -14,6 +14,7 @@ import {
   SearchWrapper
 } from "./poll.styles";
 import searchIcon from "../../assets/search-icon.png";
+import filter from "../../assets/filter.png";
 
 
 
@@ -43,7 +44,7 @@ const Poll = () => {
               />
             </SearchBarForm>
           </SearchBarContainer>
-          <Button>Filter</Button>
+          <Button><img src={filter} alt="filter" marginRight= {15}/>Filter</Button>
           </SearchWrapper>
           </Header>
 
