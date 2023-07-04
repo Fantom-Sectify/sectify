@@ -18,15 +18,15 @@ export const ConnectWrapper = styled.div`
 
 
 export const LContainer = styled.div`
-    width: 20%;
+    width: 70%;
     height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   margin-right:5rem;
+    margin-left:4rem;
 
     & img{
-     height:4rem;
+     height:5rem;
      width:8rem;
      
      
@@ -60,7 +60,7 @@ export const FormHeader = styled.div`
 
 export const FormContainer = styled.div`
     width: 22%;
-    height: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -79,17 +79,29 @@ export const FormContainer = styled.div`
 
     }
      
-    & form-label{
-        border-radius:1px;
-    }
-    & form-label.input.placeholder{
-        margin-left:1rem;
-        
-    }
-    & img {
-        margin-right:1rem;
-    }
+   
     `;
+
+
+export const Button = styled.button`
+display: flex;
+background:#FFFFFF;
+width:15rem;
+border: 1px solid #B3B3B3; 
+border-radius:5px;
+color:#000000;
+height: 3rem;
+align-items: center;
+justify-content: center;
+margin-left:2rem;
+margin-bottom: 2rem;
+
+& img{
+   margin-right:1rem;
+}
+
+
+`;
 
 export const FormFooter = styled.div`
     width: 100%;

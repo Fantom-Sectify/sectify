@@ -18,17 +18,17 @@ export const VerifyWrapper = styled.div`
 
 
 export const LContainer = styled.div`
-    width: 20%;
+    width: 60%;
     height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   margin-right:5rem;
+    margin-left: 2rem;
 
     & img{
      height:4rem;
      width:8rem;
-     margin-top:4rem;
+     margin-top:2rem;
      
      
     }
@@ -57,7 +57,7 @@ export const FormHeader = styled.div`
     }
 
     & h3 {
-        line-height:0.2rem;
+        line-height:1rem;
         margin-top:0.5rem;
         font-size:0.8rem;
         font-weight:450;
@@ -65,7 +65,7 @@ export const FormHeader = styled.div`
     }
 
     & p{
-        line-height:0.1rem;
+        line-height:1rem;
        font-size:0.8rem;
        margin-bottom:3rem;
         
@@ -83,7 +83,7 @@ export const FormContainer = styled.div`
     border-radius: 5px;
     margin-left: 30rem;
     justify-content: center;
-    margin-top:5rem;
+    margin-top:7rem;
 
     & form {
     width: 100%;
