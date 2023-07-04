@@ -18,17 +18,18 @@ export const ConfirmWrapper = styled.div`
 
 
 export const LContainer = styled.div`
-    width: 20%;
+    width: 70%;
     height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right:5rem;
+    
 
     & img{
      height:4rem;
      width:8rem;
-     margin-top:4rem;
+     margin-top:2rem;
+     margin-left:3rem;
      
      
     }
