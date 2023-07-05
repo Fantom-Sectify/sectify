@@ -44,11 +44,23 @@ import 'sweetalert2/dist/sweetalert2.css';
         fontWeight: 'bold',
         title: 'Successful',
         text: 'You have successfully casted your vote to your preferred candidate',
-        showConfirmButton: false,
-        timer: 2000
+        confirmButtonColor: 'green',
+        confirmButtonText: 'Continue',
+        // showConfirmButton: false,
+        timer: 2500
       });
 
       setVotedCandidate(candidate);
+    } else {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'danger',
+        title: 'You have already voted!',
+        text: 'You can only vote for one candidate in this divison.',
+        confirmButtonColor: 'red',
+        confirmButtonText: 'OK',
+        timer: 2000
+      });
     }
   };
   
@@ -102,7 +114,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <VButton 
                       onClick={() => handleVote('Bola Tinubu')}
                       className={votedCandidate === 'Bola Tinubu' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>
+                      >
                         Vote
                     </VButton></td>
                     
@@ -114,7 +126,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Professor Peter Umeadi')}
                       className={votedCandidate === 'Professor Peter Umeadi' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton>
+                      >Vote</VButton>
                     </td>
                     </tr>
                   <tr>
@@ -124,7 +136,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Sowore Omoyele')}
                       className={votedCandidate === 'Sowore Omoyele' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     
                   </tr>
                   <tr>
@@ -134,7 +146,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Peter Obi')}
                       className={votedCandidate === 'Peter Obi' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     </tr>
                   <tr>
                   <td>Rabiu Musa Kwankwaso</td>
@@ -143,7 +155,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Rabiu Musa Kwankwaso')}
                       className={votedCandidate === 'Rabiu Musa Kwankwaso' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     </tr>
                   <tr>
                   <td>Nwanyanwu Daniel</td>
@@ -152,7 +164,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Nwanyanwu Daniel')}
                       className={votedCandidate === 'Nwanyanwu Daniel' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     </tr>
                   <tr>
                   <td>Imumolen Christopher</td>
@@ -161,7 +173,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Imumolen Christopher')}
                       className={votedCandidate === 'Imumolen Christopher' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     
                   </tr>
                   <tr>
@@ -171,7 +183,7 @@ import 'sweetalert2/dist/sweetalert2.css';
                     <td><VButton 
                       onClick={() => handleVote('Dumebi Kachikwu')}
                       className={votedCandidate === 'Dumebi Kachikwu' ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-500'}
-                      disabled={votedCandidate !== ''}>Vote</VButton></td>
+                      >Vote</VButton></td>
                     
                   </tr>
   
