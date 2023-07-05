@@ -28,8 +28,7 @@ const ConnectWallet = () => {
         <ConnectParent>
             <ConnectWrapper>
                 <div style={{
-                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "100vw 100vh",
-                    height: 800, width: 2000
+                    backgroundImage: `url(${voting})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", height: "100vh"
                 }}>
 
                     <FormContainer>
