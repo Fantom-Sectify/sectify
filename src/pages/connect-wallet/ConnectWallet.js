@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import logo from "../../assets/logo.png";
 import {
     ConnectParent,
@@ -11,7 +12,7 @@ import {
 
 } from "./connect.wallet.styles.js";
 import { Link } from "react-router-dom";
-
+import {SectifyContext} from "../../connection/SectifyContext";
 import voting from "../../assets/voting.png";
 import trustwallet from "../../assets/trustwallet.png";
 import metamask from "../../assets/Meta mask.png";
@@ -22,9 +23,10 @@ import coinbase from "../../assets/coinbase.png";
 
 
 const ConnectWallet = () => {
-
+    const { address, connectMetaMask } = useContext(SectifyContext);
 
     return (
+        <>
         <ConnectParent>
             <ConnectWrapper>
                 <div style={{
@@ -42,9 +44,9 @@ const ConnectWallet = () => {
 
 
                             </FormHeader>
-                            <Button><img src={metamask} alt="metamask" height={18} marginLeft={5} /> Meta mask</Button>
-
-
+                            
+                              <Button  onClick={connectMetaMask}><img src={metamask} alt="metamask" height={18} marginLeft={5} /> Meta mask</Button>
+                            {!address? 'Connected' : 'Connect Wallet'}
                             <Button> <img src={trustwallet} alt="trustwallet" height={18} marginRight={10} />Trust wallet</Button>
 
 
@@ -66,7 +68,7 @@ const ConnectWallet = () => {
                 </div>
             </ConnectWrapper>
         </ConnectParent>
-
+        </>
     );
 };
 
